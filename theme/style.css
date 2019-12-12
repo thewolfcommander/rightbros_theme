@@ -1,0 +1,305 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+
+
+/* Color variables */
+:root {
+    --r-color-1: #191654;
+    --r-color-2: #43c6ac;
+    --r-color-3: #237a57;
+    --r-color-4: #ffafbd;
+    --r-color-5: #dbe6f6;
+    --r-color-6: #4ca2cd;
+    --r-color-7: #ee0979;
+    --r-color-8: #de6161;
+    --r-color-9: #89253e;
+    --r-color-10: #d4d5d6;
+    --r-color-11: #00b09b;
+    --r-color-12: #CB356B;
+    --r-color-13: #BD3F32;
+
+    /* Font variables */
+    --font-size-1: 64px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.upNav {
+    background: var(--r-color-8);
+    padding: 5px 20px;
+    height: 80px !important;
+    box-shadow: 0 0 40px -10px #000;
+}
+
+
+.logo {
+    width: 360px;
+    margin: 10px auto 0;
+    cursor: pointer;
+    float: left !important;
+}
+
+.brandLogo {
+    width: 200px;
+}
+
+
+.menu {
+    width: 160px;
+    margin-right: 50px!important;
+    margin: 10px auto 0;
+    cursor: pointer;
+    float: right !important;
+}
+
+
+@media screen and (max-width: 660px) {
+    .upNav {
+        height: 60px !important;
+    }
+    .logo {
+        margin-left: 20%!important;
+        width: 300px;
+        margin: 5px auto 0;
+    }
+    .logo .brandLogo {
+        width: 180px;
+        margin-top: -10px;
+    }
+
+    .menu {
+        width: 100%;
+        margin-right: 0px!important;
+        margin: 10px auto 0;
+    }
+}
+
+
+.title {
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 14px;
+    border-radius: 4px;
+    position: relative;
+    color: #505050
+}
+
+span {
+    float: right;
+    font-size: 18px !important
+}
+
+.dropdown {
+    width: 120%;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 40px -10px #000;
+    color: #505050;
+    margin-top: 24px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s
+}
+
+.down {
+    max-height: 150px
+}
+
+.arrow {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    right: 20px;
+    bottom: -24px;
+    display: none
+}
+
+.arrow.gone {
+    display: block
+}
+
+p {
+    padding: 15px 14px;
+    margin: 0;
+    transition: all .1s
+}
+
+p:hover {
+    background: var(--r-color-8);
+    -webkit-transform: scale(1.05);
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 30px -10px #000
+}
+
+
+
+/* ************** Styling for header starts from here *********************** */
+
+
+#namer {
+    position: relative;
+    max-width: 400px;
+    margin: 150px auto 0;
+   }
+   
+   #namer input {
+    border: 0;
+    border-bottom: 2px solid var(--r-color-8);
+    width: 100%;
+    font-size: 30px;
+    line-height: 35px;
+    height: 70px;
+    text-align: center;
+    padding: 10px;
+    background: transparent;
+       color: var(--r-color-9);
+   }
+   
+   #namer input.shake {
+    animation-name: shaker;
+    animation-duration: 200ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+   }
+   
+   #namer input:focus {
+    outline: 0;
+       color: var(--r-color-9);
+   }
+   
+   #namer input::placeholder {
+    color: var(--r-color-8);
+   }
+
+
+    
+   
+   .namer-controls {
+    position: relative;
+    display: block;
+    height: 30px;
+    margin: 80px 0;
+    text-align: center;
+    opacity: 0.3;
+    cursor: not-allowed;
+   }
+   
+   .namer-controls.active {
+    opacity: 1;
+    cursor: pointer;
+   }
+   
+   .namer-controls div {
+    float: left;
+    width: 33.33%;
+   }
+   
+   .namer-controls div span {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px 5px;
+    width: 95%;
+    display: inline-block;
+    margin-right: 5%;
+    border-radius: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+   }
+   
+   .namer-controls div span:last-child {
+    margin-right: 0;
+   }
+   
+   .namer-controls div span.active {
+    box-shadow: none;
+    background-color: var(--r-color-8);
+    color: #fff;
+   }
+   
+   #namer-input.serious input {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Andada', serif;
+    font-weight: 500;
+   }
+   
+   #namer-input.modern input {
+    font-family: 'Raleway', sans-serif;
+    text-transform: lowercase;
+    font-weight: 300;
+    letter-spacing: 10px;
+   }
+   
+   #namer-input.cheeky input {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+   }
+   
+   @keyframes shaker {
+    0% {
+     transform: translate(0px, 0px) rotate(0deg);
+     opacity: 0.8;
+    }
+    10% {
+     transform: translate(10px, 7px) rotate(-9deg);
+     opacity: 0.6;
+    }
+    20% {
+     transform: translate(13px, -19px) rotate(-3deg);
+     opacity: 0.3;
+    }
+    30% {
+     transform: translate(-6px, -6px) rotate(2deg);
+     opacity: 0.4;
+    }
+    40% {
+     transform: translate(-9px, -18px) rotate(-5deg);
+     opacity: 0.4;
+    }
+    50% {
+     transform: translate(10px, -8px) rotate(5deg);
+     opacity: 0.7;
+    }
+    60% {
+     transform: translate(-10px, 14px) rotate(-6deg);
+     opacity: 1;
+    }
+    70% {
+     transform: translate(10px, 3px) rotate(6deg);
+     opacity: 0.1;
+    }
+    80% {
+     transform: translate(-2px, 20px) rotate(-6deg);
+     opacity: 1;
+    }
+    90% {
+     transform: translate(-7px, -19px) rotate(2deg);
+     opacity: 0.5;
+    }
+   }
+   
+   
+   #hastylink {
+     position: fixed;
+     bottom:5px;
+     left: 0;
+     right: 0;
+     font-size: 14px;
+     color: #fff;
+     text-decoration: none;
+     text-align: center;
+       letter-spacing: 1px;
+       opacity: 0.5;
+   }
+   #hastylink:hover {
+       opacity: 1
+   }
