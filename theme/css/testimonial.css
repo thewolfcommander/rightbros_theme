@@ -1,0 +1,285 @@
+
+/* Color variables */
+:root {
+    --r-color-1: #FEAC5E;
+    --r-color-15: #191654;
+    --r-color-2: #43c6ac;
+    --r-color-3: #237a57;
+    --r-color-4: #ffafbd;
+    --r-color-5: #dbe6f6;
+    --r-color-6: #4ca2cd;
+    --r-color-7: #ee0979;
+    --r-color-14: #de6161;
+    --r-color-9: #89253e;
+    --r-color-10: #d4d5d6;
+    --r-color-11: #00b09b;
+    --r-color-12: #CB356B;
+    --r-color-13: #BD3F32;
+    --r-color-8: #0099ff;
+
+    /* Font variables */
+    --font-size-1: 64px;
+
+    /* Illustration variables */
+
+    --ask-me-anything: url(rightbros/illustrations/Flat\ Design\ Illustration\ For\ Presentation\,\ Web\,\ Landing\ Page_\ A\ Man\ Stands\ Shy\ Of\ Doubts\ And\ Does\ Not\ Dare\ To\ Make\ A\ Business\ Decision.png);
+
+}
+
+.testimonial {
+    background: var(--r-color-1);
+    padding: 40px 0px 90px 0px;
+    max-height: 800px;
+}
+
+.testimonial-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 15vh;
+    margin-bottom: 50px;
+  }
+  
+  .deconstructed {
+    position: relative;
+    margin: auto;
+    height: 0.98em;
+    color: transparent;
+    font-family: 'Cambay', sans-serif;
+    font-size: 4vw;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.03em;
+  }
+  
+  .deconstructed > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--r-color-15);
+    pointer-events: none;
+  }
+  
+  .deconstructed > div:nth-child(1) {
+    -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
+    mask-image: linear-gradient(black 25%, transparent 25%);
+    animation: deconstructed1 5s infinite;
+  }
+  
+  .deconstructed > div:nth-child(2) {
+    -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    animation: deconstructed2 5s infinite;
+  }
+  
+  .deconstructed > div:nth-child(3) {
+     -webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    animation: deconstructed3 5s infinite;
+  }
+  
+  .deconstructed > div:nth-child(4) {
+     -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+    mask-image: linear-gradient(transparent 75%, black 75%);
+    animation: deconstructed4 5s infinite;
+  }
+  
+  @keyframes deconstructed1 {
+    0% {
+      transform: translateX(100%);
+    }
+    26% {
+      transform: translateX(0%);
+    }
+    83% {
+      transform: translateX(-0.1%);
+    }
+    100% {
+      transform: translateX(-120%);
+    }
+  }
+  
+  @keyframes deconstructed2 {
+    0% {
+      transform: translateX(100%);
+    }
+    24% {
+      transform: translateX(0.5%);
+    }
+    82% {
+      transform: translateX(-0.2%);
+    }
+    100% {
+      transform: translateX(-125%);
+    }
+  }
+  
+  @keyframes deconstructed3 {
+    0% {
+      transform: translateX(100%);
+    }
+    22% {
+      transform: translateX(0%);
+    }
+    81% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-130%);
+    }
+  }
+  
+  @keyframes deconstructed4 {
+    0% {
+      transform: translateX(100%);
+    }
+    20% {
+      transform: translateX(0%);
+    }
+    80% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-135%);
+    }
+  }
+
+.testimonial-carousel {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto
+  }
+  
+  .testimonials-wrapper {
+    width: 95%;
+    max-width: 500px;
+    margin: 0 auto
+  }
+  
+  .testimonials-wrapper h4 {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    position: relative;
+    padding: 30px;
+    color: #000;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 5px 5px 5px 0 rgba(23, 23, 25, .3)
+  }
+  
+  .testimonials-blob,
+  .testimonials-img {
+    border-radius: 100%
+  }
+  
+  .testimonials-img {
+    position: relative;
+    left: 50%;
+    overflow: hidden!important;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-left: -50px;
+    box-shadow: 0 0 0 5px #171719;
+    transition: all ease-out .5s;
+    transform: translateY(-30%);
+    filter: brightness(2)
+  }
+  
+  .testimonial-carousel .active .testimonials-img {
+    transform: translateY(0);
+    filter: brightness(1)
+  }
+  
+  .testimonials-person-info {
+    text-align: center;
+    color: #fff
+  }
+  
+  .testimonials-blob {
+    position: relative;
+    left: 80%;
+    width: 3px;
+    height: 3px;
+    transform: rotate(45deg)
+  }
+  
+  @keyframes anim {
+    0% {
+      opacity: 0;
+      box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff
+    }
+    50% {
+      box-shadow: 0 15px 0 0 #fff, 0 0 0 0 #fff
+    }
+    100% {
+      opacity: 1;
+      background: #fff;
+      box-shadow: 0 15px 0 4px #fff, 0 35px 0 6px #fff
+    }
+  }
+  
+  .testimonial-carousel .active .testimonials-blob {
+    transform-origin: 50% 50%;
+    animation: anim linear .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+  }
+  
+  .testimonial-carousel {
+    overflow: hidden;
+    cursor: grab
+  }
+  
+  .testimonial-carousel:active {
+    cursor: grabbing
+  }
+  
+  .testimonial-carousel .owl-item {
+    overflow: hidden;
+    transition: all ease-out .3s;
+    transform: scale(.7);
+    opacity: 0
+  }
+  
+  .testimonial-carousel .owl-item.active {
+    transform: scale(1);
+    opacity: 1
+  }
+  
+  .testimonial-carousel .owl-next,
+  .testimonial-carousel .owl-prev {
+    font-size: 13px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    padding: 0 10px;
+    transition: all ease-out .25s;
+    transform: translateY(-100%);
+    opacity: 1;
+    color: #fff;
+    border-radius: 3px;
+    background: #171719
+  }
+  
+  .testimonial-carousel .owl-next:hover,
+  .testimonial-carousel .owl-prev:hover {
+    color: #fff;
+    background: #615e6b
+  }
+  
+  .testimonial-carousel .owl-prev {
+    left: 0
+  }
+  
+  .testimonial-carousel .owl-next {
+    right: 0
+  }
+  
+  .testimonial-carousel .owl-next.disabled,
+  .testimonial-carousel .owl-prev.disabled {
+    opacity: 0
+  }
